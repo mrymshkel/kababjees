@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Bootstrap</title>
+</head>
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #1c1c1c;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #f5b400;
+    margin: 25px 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #292929 !important;
+}
+
+.navbar-brand,
+.nav-link {
+    color: #f5b400 !important;
+}
+
+.nav-link:hover {
+    color: white !important;
+}
+
+.dropdown-menu {
+    background-color: #292929;
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.dropdown-item:hover {
+    background-color: #f5b400;
+    color: #1c1c1c;
+}
+
+/* Carousel */
+.kababjees {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.carousel {
+    border: 3px solid #f5b400;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Cards */
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.card {
+    margin: 0;
+    background-color: #292929;
+    color: white;
+    border: 2px solid #f5b400;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-title,
+.card-tittle {
+    color: #f5b400;
+}
+
+.card .btn {
+    background-color: #f5b400;
+    color: #1c1c1c;
+    border: none;
+    width: 100%;
+    font-weight: bold;
+}
+
+.card .btn:hover {
+    background-color: white;
+}
+
+/* Footer */
+.footer {
+    background-color: #292929;
+    color: white;
+    border-top: 3px solid #f5b400;
+    padding: 40px 8% 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer h2,
+.footer h3 {
+    color: #f5b400;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 8px 0;
+}
+
+.footer a:hover {
+    color: #f5b400;
+}
+
+.footer-contact p,
+.footer-brand p {
+    color: #ccc;
+}
+
+.footer-bottom {
+    border-top: 1px solid #555;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    color: #aaa;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .carousel-item img {
+        height: 300px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+} 
+
+</style>
+<body>
+
+    <h1>Kababjees Spot</h1>
+
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Kababjees</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Items
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Crispy Broasts</a></li>
+             <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Burgers</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Fries & Drinks</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">More</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav> 
+
+<div class="kababjees">
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://images.pexels.com/photos/5374420/pexels-photo-5374420.jpeg" class="d-block w-100" alt="Burger">
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.pexels.com/photos/5837188/pexels-photo-5837188.jpeg" class="d-block w-100" alt="Broast">
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.pexels.com/photos/12664774/pexels-photo-12664774.jpeg" class="d-block w-100" alt="Fries and Drinks">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div> 
+
+
+<div class="container-fluid">
+<div class="card" style="width: 18rem;">
+  <img src="https://images.pexels.com/photos/39452689/pexels-photo-39452689.jpeg" class="card-img-top" alt="Steak">
+  <div class="card-body">
+    <h5 class="card-title">Tarragon Steak</h5>
+    <a href="#" class="btn btn-secoundry">Add To Cart</a>
+     <br>
+    <br>
+       <a href="#" class="btn btn-secoundry">Buy Now</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="https://images.pexels.com/photos/36701488/pexels-photo-36701488.jpeg" class="card-img-top" alt="Malai botti">
+  <div class="card-body">
+    <h5 class="card-tittle">Malai-Botti</h5>
+    <a href="#" class="btn btn-secoundry">Add To Cart</a>
+     <br>
+    <br>
+       <a href="#" class="btn btn-secoundry">Buy Now</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="https://images.pexels.com/photos/39551182/pexels-photo-39551182.jpeg" class="card-img-top" alt="Nuggets">
+  <div class="card-body">
+    <h5 class="card-title">Nuggets</h5>
+    <a href="#" class="btn btn-secoundry">Add To Cart</a>
+    <br>
+    <br>
+       <a href="#" class="btn btn-secoundry">Buy Now</a>
+  </div>
+</div>
+</div>
+
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <h2>Kabajees</h2>
+      <p>Delicious food, made with love.</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+      <a href="#">Menu</a>
+      <a href="#">About Us</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>📍 Karachi, Pakistan</p>
+      <p>📞 +92 300 1234567</p>
+      <p>✉️ info@kabajees.com</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Kabajees. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+</body>
+</html>
